@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/send-request', [ApiController::class, 'sendRequest']);
 Route::post('/get_category', [ApiController::class, 'getCategory'])->name('get_category');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

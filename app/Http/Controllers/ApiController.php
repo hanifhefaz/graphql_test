@@ -24,6 +24,9 @@ class ApiController extends Controller
 
     try {
         $response = $client->request('POST', $url, [
+            'headers' => [
+                'Authorization' => 'c2b6c396-8cd4-48d5-879f-e91afded36c0',
+            ],
             'json' => ['query' => $query],
         ]);
 
